@@ -77,19 +77,19 @@
                                         <td>${user.userName}</td>
                                         <td>${user.email}</td>
                                         <td>
-                                            <a href="#" class="btn btn-danger btn-icon-split btn-sm">
+                                            <a href="<c:url value="/user/delete?id=${user.id}" />" class="btn btn-danger btn-icon-split btn-sm">
                                             <span class="icon text-white-50">
                                             <i class="fas fa-trash"></i>
                                             </span>
                                             <span class="text">Usuń</span>
                                             </a>
-                                            <a href="#" class="btn btn-warning btn-icon-split btn-sm">
+                                            <a href="<c:url value="/user/edit?id=${user.id}" />" class="btn btn-warning btn-icon-split btn-sm">
                                                 <span class="icon text-white-50">
                                                     <i class="fas fa-exclamation-triangle"></i>
                                                 </span>
                                                 <span class="text">Edytuj</span>
                                             </a>
-                                            <a href="#" class="btn btn-info btn-icon-split btn-sm">
+                                            <a href="<c:url value="/user/show?id=${user.id}" />" class="btn btn-info btn-icon-split btn-sm">
                                                 <span class="icon text-white-50">
                                                     <i class="fas fa-info-circle"></i>
                                                 </span>
