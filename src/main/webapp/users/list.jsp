@@ -45,6 +45,42 @@
                             class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                 </div>
 
+                <!-- Content Row -->
+
+                <div class="row">
+                    <div class="col-xl-12 col-lg-10">
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h6 class="m-0 font-weight-bold text-primary">Lista użytkowników</h6>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <tr>
+                                            <th>Id</th>
+                                            <th>Nazwa użytkownika</th>
+                                            <th>Email</th>
+                                            <th>Akcja</th>
+                                        </tr>
+                                        <c:forEach items="${users}" var="user">
+                                            <tr>
+                                                <td>${user.id}</td>
+                                                <td>${user.userName}</td>
+                                                <td>${user.email}</td>
+                                                <td>
+                                                        <%--                                                <a href='<c:url value="/user/delete?id=${user.id}"/>'>Usuń</a>--%>
+                                                        <%--                                                <a href='<c:url value="/user/edit?id=${user.id}"/>'>Edit</a>--%>
+                                                        <%--                                                <a href='<c:url value="/user/show?id=${user.id}"/>'>Pokaż</a>--%>
+                                                </td>
+                                            </tr>
+                                        </c:forEach>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!-- /.container-fluid -->
 
