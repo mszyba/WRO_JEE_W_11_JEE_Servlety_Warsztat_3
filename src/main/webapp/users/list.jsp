@@ -42,7 +42,7 @@
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800">Dashboard</h1>
                     <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
+                            class="fas fa-plus-square fa-sm text-white-50"></i> Dodaj użytkownika</a>
                 </div>
 
 
@@ -77,19 +77,19 @@
                                         <td>${user.userName}</td>
                                         <td>${user.email}</td>
                                         <td>
-                                            <a href="#" class="btn btn-danger btn-icon-split">
+                                            <a href="#" class="btn btn-danger btn-icon-split btn-sm">
                                             <span class="icon text-white-50">
                                             <i class="fas fa-trash"></i>
                                             </span>
                                             <span class="text">Usuń</span>
                                             </a>
-                                            <a href="#" class="btn btn-warning btn-icon-split">
+                                            <a href="#" class="btn btn-warning btn-icon-split btn-sm">
                                                 <span class="icon text-white-50">
                                                     <i class="fas fa-exclamation-triangle"></i>
                                                 </span>
                                                 <span class="text">Edytuj</span>
                                             </a>
-                                            <a href="#" class="btn btn-info btn-icon-split">
+                                            <a href="#" class="btn btn-info btn-icon-split btn-sm">
                                                 <span class="icon text-white-50">
                                                     <i class="fas fa-info-circle"></i>
                                                 </span>
