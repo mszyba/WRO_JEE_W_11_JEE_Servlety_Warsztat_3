@@ -45,38 +45,61 @@
                             class="fas fa-download fa-sm text-white-50"></i> Generate Report</a>
                 </div>
 
-                <!-- Content Row -->
 
-                <div class="row">
-                    <div class="col-xl-12 col-lg-10">
-                        <div class="card shadow mb-4">
-                            <div class="card-header py-3">
-                                <h6 class="m-0 font-weight-bold text-primary">Lista użytkowników</h6>
-                            </div>
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table">
-                                        <tr>
-                                            <th>Id</th>
-                                            <th>Nazwa użytkownika</th>
-                                            <th>Email</th>
-                                            <th>Akcja</th>
-                                        </tr>
-                                        <c:forEach items="${users}" var="user">
-                                            <tr>
-                                                <td>${user.id}</td>
-                                                <td>${user.userName}</td>
-                                                <td>${user.email}</td>
-                                                <td>
-                                                        <%--                                                <a href='<c:url value="/user/delete?id=${user.id}"/>'>Usuń</a>--%>
-                                                        <%--                                                <a href='<c:url value="/user/edit?id=${user.id}"/>'>Edit</a>--%>
-                                                        <%--                                                <a href='<c:url value="/user/show?id=${user.id}"/>'>Pokaż</a>--%>
-                                                </td>
-                                            </tr>
-                                        </c:forEach>
-                                    </table>
-                                </div>
-                            </div>
+                <!-- DataTales Example -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nazwa użytkownika</th>
+                                    <th>E-mail</th>
+                                    <th>Akcja</th>
+                                </tr>
+                                </thead>
+                                <tfoot>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Nazwa użytkownika</th>
+                                    <th>E-mail</th>
+                                    <th>Akcja</th>
+                                </tr>
+                                </tfoot>
+                                <tbody>
+                                <c:forEach items="${users}" var="user">
+                                    <tr>
+                                        <td>${user.id}</td>
+                                        <td>${user.userName}</td>
+                                        <td>${user.email}</td>
+                                        <td>
+                                            <a href="#" class="btn btn-danger btn-icon-split">
+                                            <span class="icon text-white-50">
+                                            <i class="fas fa-trash"></i>
+                                            </span>
+                                            <span class="text">Usuń</span>
+                                            </a>
+                                            <a href="#" class="btn btn-warning btn-icon-split">
+                                                <span class="icon text-white-50">
+                                                    <i class="fas fa-exclamation-triangle"></i>
+                                                </span>
+                                                <span class="text">Edytuj</span>
+                                            </a>
+                                            <a href="#" class="btn btn-info btn-icon-split">
+                                                <span class="icon text-white-50">
+                                                    <i class="fas fa-info-circle"></i>
+                                                </span>
+                                                <span class="text">Pokaż</span>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                </c:forEach>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>
