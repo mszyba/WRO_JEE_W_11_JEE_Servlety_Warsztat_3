@@ -12,7 +12,6 @@
 
     <!-- Custom styles for this template-->
     <link href="<c:url value="/theme/css/sb-admin-2.min.css"/>" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -47,7 +46,7 @@
 
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Edytuj użytkownika</h6>
+                        <h6 class="m-0 font-weight-bold text-primary">Pokaż użytkownika</h6>
                     </div>
                     <div class="card-body">
                         <form method="post">
@@ -68,11 +67,9 @@
                                 <input name="userPassword" readonly type="password" class="form-control" id="userPassword">
                             </div>
 
-                            <button type="submit" class="btn btn-primary">Zapisz</button>
+                            <a href="<c:url value="/user/list" />" class="btn btn-primary">Powrót do listy</a>
                         </form>
-
                     </div>
-
                 </div>
                 <!-- /.container-fluid -->
 
