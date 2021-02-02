@@ -42,7 +42,7 @@
                 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                     <h1 class="h3 mb-0 text-gray-800">UserCRUD</h1>
                     <a href="<c:url value="/user/list" />" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                            class="fas fa-plus-square fa-sm text-white-50"></i> Lista użytkowników</a>
+                            class="fas fa-th-list fa-sm text-white-50"></i> Lista użytkowników</a>
                 </div>
 
                 <div class="card shadow mb-4">
