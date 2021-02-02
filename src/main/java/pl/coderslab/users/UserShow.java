@@ -12,10 +12,6 @@ import java.io.IOException;
 
 @WebServlet(name = "UserShow", value = "/user/show")
 public class UserShow extends HttpServlet {
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-    }
-
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String id = request.getParameter("id");
         UserDao userDao = new UserDao();
