@@ -19,7 +19,7 @@
     <li class="nav-item active">
         <a class="nav-link" href="${pageContext.request.contextPath}/index.jsp">
             <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
+            <span>UserCRUD</span></a>
     </li>
 
     <!-- Divider -->
@@ -40,8 +40,8 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="${pageContext.request.contextPath}/user/list">Show all users</a>
-                <a class="collapse-item" href="cards.html">Cards</a>
+                <a class="collapse-item" href="<c:url value="/user/list" />" >Tabela użytkowników</a>
+                <a class="collapse-item" href="<c:url value="/user/add" />" >Dodaj użytkownika</a>
             </div>
         </div>
     </li>
