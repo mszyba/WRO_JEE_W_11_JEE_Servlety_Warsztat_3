@@ -1,7 +1,5 @@
 package pl.coderslab.entity;
 
-import org.apache.logging.log4j.Level;
-import org.mindrot.jbcrypt.BCrypt;
 import pl.coderslab.utils.DbUtil;
 
 import java.sql.*;
@@ -135,6 +133,20 @@ public class UserDao {
             return rs.next();
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+        return false;
+    }
+
+    public static boolean isExistEmail(String email) {
+        final String SQL = "SELECT 1 FROM users WHERE email = ?";
+
+        try (Connection conn = DbUtil.getConnection()) {
+            PreparedStatement ps = conn.prepareStatement(SQL);
+            ps.setString(1, email);
+            ResultSet rs = ps.executeQuery();
+            return rs.next();
+        } catch (SQLException e) {
+            log.error(e.getMessage());
         }
         return false;
     }
