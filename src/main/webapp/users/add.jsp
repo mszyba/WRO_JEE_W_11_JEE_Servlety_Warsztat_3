@@ -49,6 +49,10 @@
                         <h6 class="m-0 font-weight-bold text-primary">Dodaj użytkownika</h6>
                     </div>
                 <div class="card-body">
+                    <c:if test="${cookie.containsKey('emailExist')}">
+                        <%@ include file="addError.jsp" %>
+                    </c:if>
+
                     <form method="post">
                         <div class="form-group col-md-6">
                             <label for="userName">Nazwa</label>
