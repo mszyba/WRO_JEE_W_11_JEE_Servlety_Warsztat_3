@@ -94,12 +94,12 @@ public class UserDao {
             if (isExistRecord(userId, conn)) {
                 statement.setInt(1, userId);
                 statement.executeUpdate();
-                System.out.println("Successfully deleted!");
+                log.info("successfully deleted record id: " + userId);
             } else {
-                System.out.println("Record doesn't exist.");
+                log.warn("Record doesn't exist, id: " + userId);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
     }
 
@@ -117,16 +117,15 @@ public class UserDao {
                 allUsers.add(user);
             }
             if (allUsers.size() <= 0) {
-                System.out.println("No records in table.");
+                log.warn("No records in table");
             }
             return allUsers;
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
             return null;
         }
     }
 
-    //    metoda sprawdza czy rekord istnieje w bazie danych
     private boolean isExistRecord(int id, Connection dbConn) {
         final String SQL = "SELECT 1 FROM users WHERE id = ?";
         try {
