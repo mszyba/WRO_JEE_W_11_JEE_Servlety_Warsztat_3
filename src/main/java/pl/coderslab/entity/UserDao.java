@@ -59,11 +59,11 @@ public class UserDao {
                         resultSet.getString("password")
                 );
             } else {
-                System.out.println("Id doesn't exist. Try again.");
+                log.warn("Id doesn't exist: " + userId);
                 return null;
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
             return null;
         }
     }
