@@ -1,5 +1,6 @@
 package pl.coderslab.users;
 
+import org.mindrot.jbcrypt.BCrypt;
 import pl.coderslab.entity.User;
 import pl.coderslab.entity.UserDao;
 
@@ -17,7 +18,7 @@ public class UserAdd extends HttpServlet {
         User user = new User();
         user.setUserName(request.getParameter("userName"));
         user.setEmail(request.getParameter("userEmail"));
-        user.setPassword(request.getParameter("userPassword"));
+        user.setPassword(hashPassword(request.getParameter("userPassword")));
 
         UserDao userDao = new UserDao();
         userDao.create(user);
@@ -28,5 +29,9 @@ public class UserAdd extends HttpServlet {
 
         getServletContext().getRequestDispatcher("/users/add.jsp")
                 .forward(request, response);
+    }
+
+    private String hashPassword(String password) {
+        return BCrypt.hashpw(password, BCrypt.gensalt());
     }
 }
