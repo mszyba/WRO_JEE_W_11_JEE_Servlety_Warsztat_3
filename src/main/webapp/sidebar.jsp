@@ -7,9 +7,9 @@
     <!-- Sidebar - Brand -->
     <a class="sidebar-brand d-flex align-items-center justify-content-center" href="${pageContext.request.contextPath}/index.jsp">
         <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-laugh-wink"></i>
+            <i class="fas fa-atom"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+        <div class="sidebar-brand-text mx-3"></div>
     </a>
 
     <!-- Divider -->
@@ -18,32 +18,13 @@
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
         <a class="nav-link" href="<c:url value="/user/list" />" >
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>UserCRUD</span></a>
+            <i class="fas fa-fw fa-list"></i>
+            <span>User Table</span></a>
     </li>
-
-    <!-- Divider -->
-    <hr class="sidebar-divider">
-
-    <!-- Heading -->
-    <div class="sidebar-heading">
-        Interface
-    </div>
-
-    <!-- Nav Item - Pages Collapse Menu -->
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
-           aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>User Table</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="<c:url value="/user/list" />" >Tabela użytkowników</a>
-                <a class="collapse-item" href="<c:url value="/user/add" />" >Dodaj użytkownika</a>
-            </div>
-        </div>
+    <li class="nav-item active">
+        <a class="nav-link" href="<c:url value="/user/add" />" >
+            <i class="fas fa-fw fa-plus-circle"></i>
+            <span>Add user</span></a>
     </li>
 
     <!-- Divider -->
