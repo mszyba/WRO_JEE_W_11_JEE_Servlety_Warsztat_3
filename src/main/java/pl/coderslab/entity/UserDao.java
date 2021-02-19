@@ -1,12 +1,17 @@
 package pl.coderslab.entity;
 
+import org.apache.logging.log4j.Level;
 import org.mindrot.jbcrypt.BCrypt;
 import pl.coderslab.utils.DbUtil;
 
 import java.sql.*;
 import java.util.ArrayList;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class UserDao {
+
+    private static final Logger log = LogManager.getLogger(UserDao.class);
 
     private static final String CREATE_USER_QUERY =
             "INSERT INTO users(username, email, password) VALUES (?, ?, ?)";
@@ -19,28 +24,24 @@ public class UserDao {
     private static final String ALL_USERS_QUERY =
             "SELECT * FROM users";
 
-    private String hashPassword(String password) {
-        return BCrypt.hashpw(password, BCrypt.gensalt());
-    }
-
     public User create(User user) {
         try (Connection conn = DbUtil.getConnection()) {
             PreparedStatement statement = conn.prepareStatement(CREATE_USER_QUERY, Statement.RETURN_GENERATED_KEYS);
             statement.setString(1, user.getUserName());
             statement.setString(2, user.getEmail());
-            statement.setString(3, hashPassword(user.getPassword()));
+            statement.setString(3, user.getPassword());
             statement.executeUpdate();
             ResultSet resultSet = statement.getGeneratedKeys();
             if (resultSet.next()) {
                 user.setId(resultSet.getInt(1));
             }
-            System.out.println("Record added.");
+            log.info("Added user: " + user.toString());
             return user;
         } catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("A user with this e-mail already exists. Try again.");
+            log.warn("e-mail already exists: " + user.toString());
             return null;
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
             return null;
         }
     }
@@ -73,7 +74,7 @@ public class UserDao {
             if (isExistRecord(user.getId(), conn)) {
                 statement.setString(1, user.getUserName());
                 statement.setString(2, user.getEmail());
-                statement.setString(3, hashPassword(user.getPassword()));
+                statement.setString(3, user.getPassword());
                 statement.setInt(4, user.getId());
                 statement.executeUpdate();
                 System.out.println("Successfully updated!");
