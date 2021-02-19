@@ -77,14 +77,14 @@ public class UserDao {
                 statement.setString(3, user.getPassword());
                 statement.setInt(4, user.getId());
                 statement.executeUpdate();
-                System.out.println("Successfully updated!");
+                log.info(user + " successfully updated");
             } else {
-                System.out.println("Record doesn't exist.");
+                log.warn(user + " : record not exist");
             }
         }  catch (SQLIntegrityConstraintViolationException e) {
-            System.out.println("A user with this e-mail already exists. Try again.");
+            log.warn("e-mail already exists: " + user.toString());
         } catch (SQLException e) {
-            e.printStackTrace();
+            log.error(e.getMessage());
         }
     }
 
