@@ -50,7 +50,7 @@
                     </div>
                 <div class="card-body">
                     <c:if test="${cookie.containsKey('emailExist')}">
-                        <%@ include file="addError.jsp" %>
+                        <%@ include file="errorEmailExist.jsp" %>
                     </c:if>
 
                     <form method="post">
