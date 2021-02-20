@@ -61,19 +61,19 @@
                                         <th>ID</th>
                                         <th>Nazwa użytkownika</th>
                                         <th>E-mail</th>
-                                        <th>Usuń</th>
-                                        <th>Edytuj</th>
-                                        <th>Pokaż</th>
+                                        <th width="7%">Delete</th>
+                                        <th width="7%">Edit</th>
+                                        <th width="7%">Show</th>
                                     </tr>
                                     </thead>
                                     <tfoot>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Nazwa użytkownika</th>
+                                        <th>Name</th>
                                         <th>E-mail</th>
-                                        <th>Usuń</th>
-                                        <th>Edytuj</th>
-                                        <th>Pokaż</th>
+                                        <th>Delete</th>
+                                        <th>Edit</th>
+                                        <th>Show</th>
                                     </tr>
                                     </tfoot>
                                     <tbody>
@@ -87,7 +87,7 @@
                                             <span class="icon text-white-50">
                                             <i class="fas fa-trash"></i>
                                             </span>
-                                                    <span class="text">Usuń</span>
+                                                    <span class="text">Delete</span>
                                                 </a>
                                             </td>
                                             <td>
@@ -95,7 +95,7 @@
                                                 <span class="icon text-white-50">
                                                     <i class="fas fa-exclamation-triangle"></i>
                                                 </span>
-                                                    <span class="text">Edytuj</span>
+                                                    <span class="text">Edit</span>
                                                 </a>
                                             </td>
                                             <td>
@@ -103,7 +103,7 @@
                                                 <span class="icon text-white-50">
                                                     <i class="fas fa-info-circle"></i>
                                                 </span>
-                                                    <span class="text">Pokaż</span>
+                                                    <span class="text">Show</span>
                                                 </a>
                                             </td>
                                         </tr>
