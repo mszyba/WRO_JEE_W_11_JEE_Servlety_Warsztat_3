@@ -103,7 +103,7 @@
                             <!-- form start -->
                             <form method="post">
                                 <div class="form-group col-md-10">
-                                    <label for="userName">Nazwa</label>
+                                    <label for="userName">Name</label>
                                     <input value="${user.userName}"  name="userName" type="text" class="form-control" id="userName" placeholder="Nazwa użytkownika" required>
                                 </div>
                                 <div class="form-group col-md-10">
@@ -111,7 +111,7 @@
                                     <input value="${user.email}"  name="userEmail" type="email" class="form-control" id="userEmail" placeholder="Email użytkownika" required>
                                 </div>
                                 <div class="form-group col-md-10">
-                                    <label for="userPassword">Hasło</label>
+                                    <label for="userPassword">Password</label>
                                     <input name="userPassword" type="password" class="form-control" id="userPassword" placeholder="Hasło użytkownika" required>
                                 </div>
 

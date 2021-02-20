@@ -59,7 +59,7 @@
                                     <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Nazwa użytkownika</th>
+                                        <th>Name</th>
                                         <th>E-mail</th>
                                         <th width="7%">Delete</th>
                                         <th width="7%">Edit</th>
