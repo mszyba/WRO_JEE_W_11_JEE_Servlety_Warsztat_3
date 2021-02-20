@@ -6,14 +6,12 @@
 <jsp:useBean id="now" class="java.util.Date" />
 <fmt:formatDate var="year" value="${now}" pattern="yyyy" />
 
-
 <!-- Footer -->
-<footer class="sticky-footer bg-white">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Michał Szyba ${year}</span>
-        </div>
+<footer class="main-footer">
+    <div class="float-right d-none d-sm-block">
+        <b>Version</b> 0.1a
     </div>
+    <strong>Michał Szyba</strong>
 </footer>
 <!-- End of Footer -->
 
