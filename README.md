@@ -36,5 +36,16 @@ Libraries used:
 Templetes used:
 - AdminLTE - Bootstrap 4 Admin Dashboard (https://github.com/ColorlibHQ/AdminLTE)
 
+# Some screenshots
+
+* Users Table page
+  ![crud-UsersTable](/screenshot/UsersTable.png)
+
+* Add User page
+  ![add user](/screenshot/UserAdd.png)
+
+* Show User page
+  ![show user](/screenshot/UserShow.png)
+
 # Copyright
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
