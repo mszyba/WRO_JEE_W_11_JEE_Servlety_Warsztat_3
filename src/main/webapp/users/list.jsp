@@ -62,7 +62,9 @@
                                     <th>ID</th>
                                     <th>Nazwa użytkownika</th>
                                     <th>E-mail</th>
-                                    <th>Akcja</th>
+                                    <th>Usuń</th>
+                                    <th>Edytuj</th>
+                                    <th>Pokaż</th>
                                 </tr>
                                 </thead>
                                 <tfoot>
@@ -70,7 +72,9 @@
                                     <th>ID</th>
                                     <th>Nazwa użytkownika</th>
                                     <th>E-mail</th>
-                                    <th>Akcja</th>
+                                    <th>Usuń</th>
+                                    <th>Edytuj</th>
+                                    <th>Pokaż</th>
                                 </tr>
                                 </tfoot>
                                 <tbody>
@@ -86,12 +90,16 @@
                                             </span>
                                             <span class="text">Usuń</span>
                                             </a>
+                                        </td>
+                                        <td>
                                             <a href="<c:url value="/user/edit?id=${user.id}" />" class="btn btn-warning btn-icon-split btn-sm">
                                                 <span class="icon text-white-50">
                                                     <i class="fas fa-exclamation-triangle"></i>
                                                 </span>
                                                 <span class="text">Edytuj</span>
                                             </a>
+                                        </td>
+                                        <td>
                                             <a href="<c:url value="/user/show?id=${user.id}" />" class="btn btn-info btn-icon-split btn-sm">
                                                 <span class="icon text-white-50">
                                                     <i class="fas fa-info-circle"></i>
