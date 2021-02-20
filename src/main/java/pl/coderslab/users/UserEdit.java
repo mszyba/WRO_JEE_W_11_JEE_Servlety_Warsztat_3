@@ -21,7 +21,13 @@ public class UserEdit extends HttpServlet {
         String userEmail = request.getParameter("userEmail");
         String userHashPassword = hashPassword(request.getParameter("userPassword"));
 
-        if (!UserDao.isExistEmail(userEmail)) {
+        if (!UserDao.verifyEmail(userEmail)) {
+            Cookie cookie = new Cookie("emailNotVerify", "true");
+            cookie.setMaxAge(5);
+            response.addCookie(cookie);
+
+            response.sendRedirect(request.getContextPath() + "/user/edit?id=" + userId);
+        } else if (!UserDao.isExistEmail(userEmail)) {
             User user = new User();
             user.setId(userId);
             user.setUserName(userName);

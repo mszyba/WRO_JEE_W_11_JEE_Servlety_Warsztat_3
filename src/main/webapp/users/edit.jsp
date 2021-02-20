@@ -57,6 +57,9 @@
                             <c:if test="${cookie.containsKey('emailExist')}">
                                 <%@ include file="errorEmailExist.jsp" %>
                             </c:if>
+                            <c:if test="${cookie.containsKey('emailNotVerify')}">
+                                <%@ include file="errorEmailNotVerify.jsp" %>
+                            </c:if>
 
                             <!-- /.card-header -->
                             <!-- form start -->
