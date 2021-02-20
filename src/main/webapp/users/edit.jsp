@@ -50,6 +50,10 @@
                         <h6 class="m-0 font-weight-bold text-primary">Edytuj użytkownika</h6>
                     </div>
                     <div class="card-body">
+                        <c:if test="${cookie.containsKey('emailExist')}">
+                            <%@ include file="addError.jsp" %>
+                        </c:if>
+
                         <form method="post">
                             <input type="hidden" name="id" value="${user.id}"/>
                             <div class="form-group">
