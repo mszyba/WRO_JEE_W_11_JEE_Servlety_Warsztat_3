@@ -1,42 +1,45 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<!-- Sidebar -->
-<ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+<!-- Main Sidebar Container -->
+<aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
 
-    <!-- Sidebar - Brand -->
-    <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<c:url value="/home" />" >
-        <div class="sidebar-brand-icon rotate-n-15">
-            <i class="fas fa-atom"></i>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <!-- Sidebar user (optional) -->
+        <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            <div class="info">
+                <a href="#" class="d-block">jee-crud-users</a>
+            </div>
         </div>
-        <div class="sidebar-brand-text mx-3"></div>
-    </a>
 
-    <!-- Divider -->
-    <hr class="sidebar-divider my-0">
+        <!-- SidebarSearch Form -->
 
-    <!-- Nav Item - Dashboard -->
-    <li class="nav-item active">
-        <a class="nav-link" href="<c:url value="/user/list" />" >
-            <i class="fas fa-fw fa-list"></i>
-            <span>User Table</span></a>
-    </li>
-    <li class="nav-item active">
-        <a class="nav-link" href="<c:url value="/user/add" />" >
-            <i class="fas fa-fw fa-plus-circle"></i>
-            <span>Add user</span></a>
-    </li>
-
-    <!-- Divider -->
-    <hr class="sidebar-divider d-none d-md-block">
-
-    <!-- Sidebar Toggler (Sidebar) -->
-    <div class="text-center d-none d-md-inline">
-        <button class="rounded-circle border-0" id="sidebarToggle"></button>
+        <!-- Sidebar Menu -->
+        <nav class="mt-2">
+            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                <!-- Add icons to the links using the .nav-icon class
+                     with font-awesome or any other icon font library -->
+                <li class="nav-item">
+                        <a class="nav-link" href="<c:url value="/user/list" />" >
+                        <i class="nav-icon fas fa-list"></i>
+                        <p>
+                            Users Table
+                        </p>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<c:url value="/user/add" />" >
+                        <i class="nav-icon fas fa-plus-square"></i>
+                        <p>
+                            Add user
+                        </p>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.sidebar-menu -->
     </div>
-
-    <!-- Sidebar Message -->
-
-
-</ul>
-<!-- End of Sidebar -->
+    <!-- /.sidebar -->
+</aside>

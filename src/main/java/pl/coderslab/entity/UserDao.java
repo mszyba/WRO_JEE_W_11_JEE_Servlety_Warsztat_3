@@ -4,6 +4,9 @@ import pl.coderslab.utils.DbUtil;
 
 import java.sql.*;
 import java.util.ArrayList;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -149,5 +152,12 @@ public class UserDao {
             log.error(e.getMessage());
         }
         return false;
+    }
+
+    public static boolean verifyEmail(String email) {
+        String regex = "[_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*\\.([a-zA-Z]{2,}){1}";
+        Pattern compiledPattern = Pattern.compile(regex);
+        Matcher matcher = compiledPattern.matcher(email);
+        return matcher.matches();
     }
 }

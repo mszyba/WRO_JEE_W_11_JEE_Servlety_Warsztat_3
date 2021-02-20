@@ -1,4 +1,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
-<p class="alert-danger"> Użytkownik o tym adresie e-mail istnieje. Wprowadź inny adres e-mail. </p>
+<div class="alert alert-warning alert-dismissible">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+    <h5><i class="icon fas fa-exclamation-triangle"></i> Alert!</h5>
+    Użytkownik o tym adresie e-mail istnieje. Wprowadź inny adres e-mail.
+</div>

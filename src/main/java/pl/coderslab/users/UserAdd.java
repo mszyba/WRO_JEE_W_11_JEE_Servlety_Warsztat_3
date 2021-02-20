@@ -17,7 +17,14 @@ public class UserAdd extends HttpServlet {
         String userEmail = request.getParameter("userEmail");
         String userHashPassword = hashPassword(request.getParameter("userPassword"));
 
-        if (!UserDao.isExistEmail(userEmail)) {
+        if (!UserDao.verifyEmail(userEmail)) {
+            Cookie cookie = new Cookie("emailNotVerify", "true");
+            cookie.setMaxAge(5);
+            response.addCookie(cookie);
+
+            response.sendRedirect(request.getContextPath() + "/user/add");
+        } else if (!UserDao.isExistEmail(userEmail)) {
+
             User user = new User();
             user.setUserName(userName);
             user.setEmail(userEmail);
