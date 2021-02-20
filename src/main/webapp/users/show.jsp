@@ -89,7 +89,7 @@
         <section class="content">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-lg-6 col-md-12">
                         <div class="card card-info">
                             <div class="card-header">
                                 <h3 class="card-title">Show user</h3>
